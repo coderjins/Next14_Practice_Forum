@@ -1,20 +1,20 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "./ThreadList.module.scss"; // SCSS 모듈을 위한 업데이트된 임포트
+import styles from "./ThreadList.module.scss";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 export default function ThreadList() {
+  const router = useRouter();
   const [threads, setThreads] = useState([]);
   useEffect(() => {
-    fetch("http://10.58.52.233:8000/threadlist", {
+    fetch("http://10.58.52.70:8000/threadlist", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => setThreads(data.data));
   }, []);
-  console.log(threads);
-  console.log(styles);
 
   const timeAgo = (dateString) => {
     const diffInSeconds = Math.floor(
@@ -32,6 +32,11 @@ export default function ThreadList() {
       timeInterval[1]
     } 전`;
   };
+
+  const handleLoginClick = () => {
+    router.push("/login");
+  };
+
   return (
     <div className={styles.postList}>
       <div className={styles.container}>
@@ -62,7 +67,12 @@ export default function ThreadList() {
               </div>
             </div>
           ))}
+
           <div className={styles.action}>
+            <Button onClick={handleLoginClick} className="smallLoginButton">
+              로그인
+            </Button>
+
             <Button className="smallButton">글쓰기</Button>
           </div>
         </div>

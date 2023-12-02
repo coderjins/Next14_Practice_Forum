@@ -1,0 +1,75 @@
+.Login {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  gap: 24px;
+  width: 576px;
+  height: 844px;
+  border-radius: 16px;
+  border: 1px solid #e5e5e5;
+
+  .splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    .logoImage {
+      width: 118px;
+      height: 142.997px;
+    }
+    .logoWecode {
+      width: 144px;
+      height: 32px;
+    }
+  }
+
+  .container {
+    display: flex;
+    padding: 0px 24px;
+    flex-direction: column;
+    gap: 16px;
+    height: 225px;
+
+    .userInput {
+      width: 528px;
+      height: 42px;
+      padding-left: 15px;
+    }
+  }
+
+  .signUpfindPw {
+    display: flex;
+    width: 240px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+
+    .signUp {
+      width: 96px;
+      text-align: center;
+      font-family: Apple SD Gothic Neo;
+      font-size: 14px;
+      cursor: wait;
+    }
+    .separator {
+      width: 1px;
+      height: 16px;
+      background-color: #e0e0e0;
+    }
+
+    .findPw {
+      width: 96px;
+      text-align: center;
+      font-family: Apple SD Gothic Neo;
+      font-size: 14px;
+      cursor: wait;
+    }
+  }
+}
