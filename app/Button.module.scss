@@ -1,6 +1,6 @@
 .button {
   height: 56px;
-  width: 528px;
+  width: 100%;
   border-radius: 6px;
   color: white;
   border: none;
@@ -12,6 +12,13 @@
   &:disabled {
     background: grey;
   }
+}
+.smallLoginButton {
+  height: 56px;
+  width: 120px;
+  padding: 0px 34px;
+  display: flex;
+  align-items: center;
 }
 
 .smallButton {

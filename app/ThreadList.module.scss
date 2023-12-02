@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 .postList {
   margin: 0 auto;
   display: flex;
@@ -80,7 +81,7 @@
               }
             }
             .userName {
-              font-family: Apple SD Gothic Neo;
+              font-family: "Black Han Sans", sans-serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 700;
@@ -144,10 +145,9 @@
 
     .action {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      justify-content: space-between;
+      align-items: center;
       gap: 8px;
-      align-self: stretch;
       width: 528px;
       height: 56px;
     }
